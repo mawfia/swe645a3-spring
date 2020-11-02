@@ -18,7 +18,7 @@ kind: PersistentVolume
 metadata:
   name: spring
   labels:
-    type: local
+    type: gp2
 spec:
   storageClassName: spring
   claimRef:
@@ -28,7 +28,7 @@ spec:
     storage: 5Gi
   accessModes:
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy:
+  persistentVolumeReclaimPolicy: Delete
   hostPath:
     path: "/mnt/data"
 ---
@@ -43,7 +43,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 10Gi
+      storage: 5Gi
 ---
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
