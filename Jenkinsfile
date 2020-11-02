@@ -1,6 +1,6 @@
 pipeline {
     environment {
-      registry = 'mawfia/swe645a1p2'
+      registry = 'mawfia/spring'
       registryCredential = 'dockerhub-mawfia'
     }
     agent {
