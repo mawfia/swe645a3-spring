@@ -30,7 +30,7 @@ pipeline {
                 container('helm'){
                     sh "helm upgrade spring --install --force --set version=1.0 ./spring"
                 }
-                echo 'Spring Deployment is complete!'
+                echo 'Spring Deployment is complete 2!'
             }
         }
     }
