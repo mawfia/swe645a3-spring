@@ -30,7 +30,7 @@ pipeline {
                 container('helm'){
                     sh "helm upgrade ${JOB_NAME} --install --force --set version=${BUILD_NUMBER} ./helm"
                 }
-                echo 'Deployment is complete!'
+                echo 'Spring Deployment is complete!'
             }
         }
     }
