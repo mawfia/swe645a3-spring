@@ -28,7 +28,7 @@ pipeline {
         stage('deploy') {
             steps {
                 container('helm'){
-                    sh "helm upgrade spring --install --force --set version=1.0 ./spring"
+                    sh "helm upgrade spring --install --force --set version=${BUILD_NUMBER} ./spring"
                 }
                 echo "Spring Deployment # $BUILD_NUMBER is complete!"
             }
